@@ -1,0 +1,184 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  padding: 0 50px;
+}
+
+header {
+  background: #23117c;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 50px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 70px;
+  height: 35px;
+}
+
+nav {
+  display: flex;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+}
+
+.submenu {
+  background-color: #23117c;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  list-style: none;
+  padding: 0 25px;
+  margin: 0;
+}
+
+.ham.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.ham.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.ham.active {
+  left: 0;
+  padding: 0 10px;
+}
+
+.submenu li {
+  margin: 10px 10px;
+}
+
+li.menu-list {
+  position: relative;
+}
+
+li.menu-list:hover>a {
+  color: aqua;
+}
+
+li.menu-list:hover .submenu {
+  display: block;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #23117c;
+    padding: 75px 0px;
+  }
+
+  .menu.active {
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-list {
+    border-bottom: 1px solid #6c6a6a;
+    padding: 10px 0px;
+  }
+
+  #hamburger {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    z-index: 1;
+  }
+
+  .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    right: 20px;
+  }
+
+
+  .submenu {
+    position: static;
+    padding: 0 20px;
+  }
+
+  .submenu li::before {
+    content: "-";
+  }
+
+  .menu a {
+    padding: 0 10px;
+  }
+
+  nav {
+    display: flex;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
