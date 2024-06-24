@@ -1,0 +1,115 @@
+body {
+  font-family: monospace;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background-color: #c6bfbf;
+}
+
+.day,
+.date {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 900;
+  display: grid;
+  padding: 20px;
+}
+
+.day {
+  background-color: rgb(241, 167, 232);
+  font-weight: bold;
+}
+
+.date {
+  background-color: #fafafa;
+}
+
+.date-previous {
+  background-color: #a9a3a380;
+  padding: 10px;
+  text-align: center;
+  color: #363434;
+  padding: 20px;
+}
+
+.title {
+  background: white;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.project1,
+.project2,
+.project3 {
+  height: 20px;
+  margin-top: 37px;
+  box-shadow: 0 4px 5px 0px #8e5e5e;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.project2 {
+  grid-area: 5/1/6/3;
+  background-color: #68dfed;
+  color: rgb(225, 56, 18);
+}
+
+.project1 {
+  grid-area: 3/4/4/7;
+  background-color: #d0c244;
+  color: rgb(0, 0, 0);
+}
+
+.project3 {
+  grid-area: 6/3/7/6;
+  background-color: #cfdfc5;
+  color: rgb(64, 0, 255);
+}
+
+.project-6 {
+  grid-area: 3/4/4/5;
+}
+
+.project-7 {
+  grid-area: 3/5/4/6;
+}
+
+.project-8 {
+  grid-area: 3/6/4/7;
+}
+
+.project-17 {
+  grid-area: 5/1/6/2;
+}
+
+.project-18 {
+  grid-area: 5/2/6/3;
+}
+
+.project-26 {
+  grid-area: 6/3/7/4;
+}
+
+.project-27 {
+  grid-area: 6/4/7/5;
+}
+
+.project-28 {
+  grid-area: 6/5/7/6;
+}
